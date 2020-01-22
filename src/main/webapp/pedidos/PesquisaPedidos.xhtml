@@ -19,65 +19,68 @@
 					<p:button value="Novo" id="novo" />
 				</p:toolbarGroup>
 			</p:toolbar>
-			
-			<p:panel toggleable="true" header="Filtros" collapsed="true" toggleOrientation="horizontal"
-				toggleTitle="Filtros" toggleableHeader="Filtros" closable="false" toggleSpeed="500" closeSpeed="500">
-				
-				<p:panelGrid columns="2" id="painel"
-					style="width: 100% ;margin-top: 10px" columnClasses="rotulo campo">
-					<p:outputLabel value="Número" for="numerode" />
-					<h:panelGroup>
-						<p:inputText id="numerode" size="10" />
+
+			<p:panelGrid columns="2" id="painel"
+				style="width: 100% ;margin-top: 10px" columnClasses="rotulo campo">
+				<p:outputLabel value="Número" for="numerode" />
+				<h:panelGroup>
+					<p:inputText id="numerode" size="10" />
 					a
 					<p:inputText id="numeroate" size="10" />
-					</h:panelGroup>
+				</h:panelGroup>
 
-					<p:outputLabel value="Data Inclusão" for="datade" />
-					<h:panelGroup>
-						<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
+				<p:outputLabel value="Data Inclusão" for="datade" />
+				<h:panelGroup>
+					<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
 					a
 					<p:calendar id="dataate" size="10" pattern="dd/MM/yyyy" />
-					</h:panelGroup>
+				</h:panelGroup>
 
-					<p:outputLabel value="Vendedor" for="vendedor" />
-					<p:inputText id="vendedor" size="40" />
+				<p:outputLabel value="Vendedor" for="vendedor" />
+				<p:inputText id="vendedor" size="40" />
 
-					<p:outputLabel value="Cliente" for="cliente" />
-					<p:inputText id="cliente" size="40" />
+				<p:outputLabel value="Cliente" for="cliente" />
+				<p:inputText id="cliente" size="40" />
 
-					<p:outputLabel value="Status" for="status" />
-					<p:selectManyCheckbox id="status">
-						<f:selectItem itemLabel="Orçamento" />
-						<f:selectItem itemLabel="Emitido" />
-						<f:selectItem itemLabel="cancelado" />
-					</p:selectManyCheckbox>
-				</p:panelGrid>
-			</p:panel>
+				<p:outputLabel value="Status" for="status" />
+				<p:selectManyCheckbox id="status">
+					<f:selectItem itemLabel="Orçamento" />
+					<f:selectItem itemLabel="Emitido" />
+					<f:selectItem itemLabel="cancelado" />
+				</p:selectManyCheckbox>
+			</p:panelGrid>
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
-				style="margin-top: 20px" emptyMessage="Nenhum produto encontrado."
-				rows="20" paginator="true" paginatorAlwaysVisible="false"
-				paginatorPosition="botton">
-				<p:column headerText="SKU" style="text-align: center; width: 100px">
+				style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado."
+				rows="20" paginator="true" paginatorPosition="bottom"
+				paginatorAlwaysVisible="false">
+				<p:column headerText="Numero"
+					style="text-align: center; width: 100px">
 					<h:outputText value="123" />
 				</p:column>
 
-				<p:column headerText="Nome">
-					<h:outputText value="Bala de Morango" />
+				<p:column headerText="Cliente">
+					<h:outputText value="Jefferson Moreira" />
 				</p:column>
 
-				<p:column headerText="Categoria" style="width: 250px">
-					<h:outputText value="Doces - Bala e Chicletes" />
+				<p:column headerText="Vendedor">
+					<h:outputText value="Sun Microsystems" />
 				</p:column>
 
-				<p:column headerText="Valor Unit"
-					style="text-align: center; width: 120px">
-					<h:outputText value="R$ 1,20" />
+				<p:column headerText="Data Pedido"
+					style="text-align: center; width: 140px">
+					<h:outputText value="21/08/1980">
+					</h:outputText>
 				</p:column>
 
-				<p:column headerText="Estoque"
-					style="text-align: center; width: 100px">
-					<h:outputText value="200" />
+				<p:column headerText="Valor Total"
+					style="text-align: right; width: 120px">
+					<h:outputText value="R$ 1.200,00" />
+				</p:column>
+
+				<p:column headerText="Status"
+					style="width: 100px">
+					<h:outputText value="Emitido" />
 				</p:column>
 
 				<p:column style="text-align: center; width: 100px">
