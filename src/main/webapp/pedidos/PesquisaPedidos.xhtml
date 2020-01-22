@@ -34,7 +34,6 @@
 					<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
 					a
 					<p:calendar id="dataate" size="10" pattern="dd/MM/yyyy" />
-<<<<<<< HEAD
 				</h:panelGroup>
 
 				<p:outputLabel value="Vendedor" for="vendedor" />
@@ -43,32 +42,13 @@
 				<p:outputLabel value="Cliente" for="cliente" />
 				<p:inputText id="cliente" size="40" />
 
+			</p:panelGrid>
 				<p:outputLabel value="Status" for="status" />
 				<p:selectManyCheckbox id="status">
 					<f:selectItem itemLabel="Orçamento" />
 					<f:selectItem itemLabel="Emitido" />
 					<f:selectItem itemLabel="cancelado" />
 				</p:selectManyCheckbox>
-			</p:panelGrid>
-=======
-					</h:panelGroup>
-
-					<p:outputLabel value="Vendedor" for="vendedor" />
-					<p:inputText id="vendedor" size="40" />
-
-					<p:outputLabel value="Cliente" for="cliente" />
-					<p:inputText id="cliente" size="40" />
-
-					<p:outputLabel value="Status" for="status" />
-					<p:selectManyCheckbox id="status">
-						<f:selectItem itemLabel="Orçamento" />
-						<f:selectItem itemLabel="Emitido" />
-						<f:selectItem itemLabel="cancelado" />
-					</p:selectManyCheckbox>
-				</p:panelGrid>
-				<p:commandButton value="Filtrar"/>
-			</p:panel>
->>>>>>> Develop
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
 				style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado."
