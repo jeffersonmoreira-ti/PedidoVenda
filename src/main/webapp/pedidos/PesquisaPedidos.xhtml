@@ -19,41 +19,38 @@
 					<p:button value="Novo" id="novo" />
 				</p:toolbarGroup>
 			</p:toolbar>
-			
-			<p:panel toggleable="true" header="Filtros" collapsed="true" toggleOrientation="horizontal"
-				toggleTitle="Filtros" toggleableHeader="Filtros" closable="false" toggleSpeed="500" closeSpeed="500">
-				
-				<p:panelGrid columns="2" id="painel"
-					style="width: 100% ;margin-top: 10px" columnClasses="rotulo campo">
-					<p:outputLabel value="Número" for="numerode" />
-					<h:panelGroup>
-						<p:inputText id="numerode" size="10" />
+
+			<p:panelGrid columns="2" id="painel"
+				style="width: 100% ;margin-top: 10px" columnClasses="rotulo campo">
+				<p:outputLabel value="Número" for="numerode" />
+				<h:panelGroup>
+					<p:inputText id="numerode" size="10" />
 					a
 					<p:inputText id="numeroate" size="10" />
-					</h:panelGroup>
+				</h:panelGroup>
 
-					<p:outputLabel value="Data Inclusão" for="datade" />
-					<h:panelGroup>
-						<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
+				<p:outputLabel value="Data Inclusão" for="datade" />
+				<h:panelGroup>
+					<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
 					a
 					<p:calendar id="dataate" size="10" pattern="dd/MM/yyyy" />
-					</h:panelGroup>
+				</h:panelGroup>
 
-					<p:outputLabel value="Vendedor" for="vendedor" />
-					<p:inputText id="vendedor" size="40" />
+				<p:outputLabel value="Vendedor" for="vendedor" />
+				<p:inputText id="vendedor" size="40" />
 
-					<p:outputLabel value="Cliente" for="cliente" />
-					<p:inputText id="cliente" size="40" />
+				<p:outputLabel value="Cliente" for="cliente" />
+				<p:inputText id="cliente" size="40" />
 
-					<p:outputLabel value="Status" for="status" />
-					<p:selectManyCheckbox id="status">
-						<f:selectItem itemLabel="Orçamento" />
-						<f:selectItem itemLabel="Emitido" />
-						<f:selectItem itemLabel="cancelado" />
-					</p:selectManyCheckbox>
-				</p:panelGrid>
-				<p:commandButton value="Filtrar"/>
-			</p:panel>
+				<p:outputLabel value="Status" for="status" />
+				<p:selectManyCheckbox id="status">
+					<f:selectItem itemLabel="Orçamento" />
+					<f:selectItem itemLabel="Emitido" />
+					<f:selectItem itemLabel="cancelado" />
+				</p:selectManyCheckbox>
+			</p:panelGrid>
+			<p:commandButton value="Filtrar" />
+
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
 				style="margin-top: 20px" emptyMessage="Nenhum produto encontrado."
