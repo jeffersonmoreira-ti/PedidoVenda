@@ -49,32 +49,42 @@
 					<f:selectItem itemLabel="cancelado" />
 				</p:selectManyCheckbox>
 			</p:panelGrid>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
-				style="margin-top: 20px" emptyMessage="Nenhum produto encontrado."
-				rows="20" paginator="true" paginatorAlwaysVisible="false"
-				paginatorPosition="botton">
-				<p:column headerText="SKU" style="text-align: center; width: 100px">
+				style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado."
+				rows="20" paginator="true" paginatorPosition="bottom"
+				paginatorAlwaysVisible="false">
+				<p:column headerText="Numero"
+					style="text-align: center; width: 100px">
 					<h:outputText value="123" />
 				</p:column>
 
-				<p:column headerText="Nome">
-					<h:outputText value="Bala de Morango" />
+				<p:column headerText="Cliente">
+					<h:outputText value="Jefferson Moreira" />
 				</p:column>
 
-				<p:column headerText="Categoria" style="width: 250px">
-					<h:outputText value="Doces - Bala e Chicletes" />
+				<p:column headerText="Vendedor">
+					<h:outputText value="Sun Microsystems" />
 				</p:column>
 
-				<p:column headerText="Valor Unit"
-					style="text-align: center; width: 120px">
-					<h:outputText value="R$ 1,20" />
+				<p:column headerText="Data Pedido"
+					style="text-align: center; width: 140px">
+					<h:outputText value="21/08/1980">
+					</h:outputText>
 				</p:column>
 
-				<p:column headerText="Estoque"
-					style="text-align: center; width: 100px">
-					<h:outputText value="200" />
+				<p:column headerText="Valor Total"
+					style="text-align: right; width: 120px">
+					<h:outputText value="R$ 1.200,00" />
+				</p:column>
+
+				<p:column headerText="Status"
+					style="width: 100px">
+					<h:outputText value="Emitido" />
 				</p:column>
 
 				<p:column style="text-align: center; width: 100px">
