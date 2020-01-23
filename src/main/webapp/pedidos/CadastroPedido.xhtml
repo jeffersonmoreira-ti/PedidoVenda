@@ -12,7 +12,20 @@
 			<h1>Novo Pedido</h1>
 
 			<ui:include src="/WEB-INF/template/pedidos/BotoesPedido.xhtml" />
+			<ui:include src="/WEB-INF/template/pedidos/CapaPedido.xhtml" />
 
+			<p:tabView style="margin-top: 20px">
+				<p:tab title="Itens">
+					<ui:include src="/WEB-INF/template/pedidos/ItensPedido.xhtml" />
+				</p:tab>
+
+				<p:tab title="Dados Entrega">
+				<ui:include src="/WEB-INF/template/pedidos/DadosEntregaPedido.xhtml" />
+				</p:tab>
+
+				<p:tab title="observação">
+				</p:tab>
+			</p:tabView>
 
 		</h:form>
 	</ui:define>

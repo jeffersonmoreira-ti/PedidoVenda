@@ -16,7 +16,7 @@
 					<p:commandButton value="Pesquisar" id="botaoSalvar" />
 				</p:toolbarGroup>
 				<p:toolbarGroup align="right">
-					<p:button value="Novo" id="novo" />
+					<p:button value="Novo" id="novo" outcome="/pedidos/CadastroPedido"/>
 				</p:toolbarGroup>
 			</p:toolbar>
 
@@ -49,6 +49,7 @@
 					<f:selectItem itemLabel="Emitido" />
 					<f:selectItem itemLabel="cancelado" />
 				</p:selectManyCheckbox>
+			</p:panelGrid>
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
 				style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado."
