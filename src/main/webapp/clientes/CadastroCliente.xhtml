@@ -16,7 +16,8 @@
 				<p:commandButton value="Salvar" id="botaoSalvar" />
 			</p:toolbarGroup>
 			<p:toolbarGroup align="right">
-				<p:button value="Pesquisa" id="botaoPesquisa" />
+				<p:button value="Pesquisa" id="botaoPesquisa"
+					outcome="/clientes/PesquisaClientes" />
 			</p:toolbarGroup>
 		</p:toolbar>
 
@@ -39,9 +40,41 @@
 
 			<p:outputLabel value="e-Mail" for="email" />
 			<p:inputText id="email" size="100" maxlength="100" required="true" />
-
-
 		</p:panelGrid>
+
+
+		<p:commandButton value="Adicionar Endereço" style="margin-top: 10px" />
+
+		<p:dataTable value="#{pesquisaProdutosBean.produtosFiltrados}"
+			var="enderecos" id="tabelaEnderecos" style="margin-top: 10px">
+			<p:column headerText="Logradouro">
+				<h:outputLabel value="Rua da Cacimba, 648" />
+			</p:column>
+
+			<p:column headerText="Número" style="text-align: center;width: 100px">
+				<h:outputLabel value="12345" />
+			</p:column>
+
+			<p:column headerText="Complemento"
+				style="text-align: right;width: 200px">
+				<h:outputLabel value="Terceiro Andar" />
+			</p:column>
+
+			<p:column headerText="CEP" style="text-align: right;width: 100px">
+				<p:inputText value="38499-533" />
+			</p:column>
+
+			<p:column headerText="Cidade/UF"
+				style="text-align: right;width: 100px">
+				<p:inputText value="Salvador/BA" />
+			</p:column>
+
+			<p:column style="text-align: center; width: 100px">
+				<p:button icon="ui-icon-pencil" title="Editar" />
+				<p:commandButton icon="ui-icon-trash" title="Apagar" />
+			</p:column>
+
+		</p:dataTable>
 
 	</ui:define>
 </ui:composition>

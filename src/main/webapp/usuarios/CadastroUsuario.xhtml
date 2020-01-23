@@ -5,18 +5,19 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 
-	<ui:define name="titulo">Novo Produto</ui:define>
+	<ui:define name="titulo">Novo Usuário</ui:define>
 
 	<ui:define name="corpo">
 		<h1>Novo Usuário</h1>
 
 		<p:toolbar style="margin-top: 20px">
 			<p:toolbarGroup>
-				<p:button value="Novo" outcome="/clientes/CadastroCliente" />
+				<p:button value="Novo" outcome="/usuarios/CadastroUsuario" />
 				<p:commandButton value="Salvar" id="botaoSalvar" />
 			</p:toolbarGroup>
 			<p:toolbarGroup align="right">
-				<p:button value="Pesquisa" id="botaoPesquisa" />
+				<p:button value="Pesquisa" id="botaoPesquisa"
+					outcome="/usuarios/PesquisaUsuarios" />
 			</p:toolbarGroup>
 		</p:toolbar>
 
@@ -35,8 +36,25 @@
 
 			<p:outputLabel value="Confirme a Senha" for="senhaConfirmacao" />
 			<p:password id="senhaConfirmacao" required="true" feedback="true" />
-
 		</p:panelGrid>
+
+		<p:selectOneMenu id="selecionarGrupo" style="margin-top: 10px">
+			<f:selectItem itemLabel="Administradores" itemValue="admin" />
+		</p:selectOneMenu>
+		<p:commandButton value="Adicionar grupo" style="margin-top: 10px; margin-left: 5px" />
+		
+		<p:dataTable value="#{pesquisaProdutosBean.produtosFiltrados}"
+			var="enderecos" id="tabelagRUPOS" style="margin-top: 10px">
+
+			<p:column headerText="Grupo">
+				<h:outputLabel value="Administradores" />
+			</p:column>
+
+			<p:column style="text-align: center; width: 30px">
+				<p:commandButton icon="ui-icon-trash" title="Apagar" />
+			</p:column>
+
+		</p:dataTable>
 
 	</ui:define>
 </ui:composition>
