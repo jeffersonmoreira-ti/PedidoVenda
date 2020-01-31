@@ -9,14 +9,14 @@
 
 	<ui:define name="corpo">
 		<h:form>
-			<h1>Pesquisa Produtos</h1>
+			<h1>Pesquisa Pedidos</h1>
 
 			<p:toolbar style="margin-top: 20px">
 				<p:toolbarGroup>
 					<p:commandButton value="Pesquisar" id="botaoSalvar" />
 				</p:toolbarGroup>
 				<p:toolbarGroup align="right">
-					<p:button value="Novo" id="novo" />
+					<p:button value="Novo" id="novo" outcome="/pedidos/CadastroPedido"/>
 				</p:toolbarGroup>
 			</p:toolbar>
 
@@ -34,7 +34,6 @@
 					<p:calendar id="datade" size="10" pattern="dd/MM/yyyy" />
 					a
 					<p:calendar id="dataate" size="10" pattern="dd/MM/yyyy" />
-<<<<<<< HEAD
 				</h:panelGroup>
 
 				<p:outputLabel value="Vendedor" for="vendedor" />
@@ -43,6 +42,7 @@
 				<p:outputLabel value="Cliente" for="cliente" />
 				<p:inputText id="cliente" size="40" />
 
+
 				<p:outputLabel value="Status" for="status" />
 				<p:selectManyCheckbox id="status">
 					<f:selectItem itemLabel="Orçamento" />
@@ -50,25 +50,10 @@
 					<f:selectItem itemLabel="cancelado" />
 				</p:selectManyCheckbox>
 			</p:panelGrid>
+<<<<<<< HEAD
+
 =======
-					</h:panelGroup>
-
-					<p:outputLabel value="Vendedor" for="vendedor" />
-					<p:inputText id="vendedor" size="40" />
-
-					<p:outputLabel value="Cliente" for="cliente" />
-					<p:inputText id="cliente" size="40" />
-
-					<p:outputLabel value="Status" for="status" />
-					<p:selectManyCheckbox id="status">
-						<f:selectItem itemLabel="Orçamento" />
-						<f:selectItem itemLabel="Emitido" />
-						<f:selectItem itemLabel="cancelado" />
-					</p:selectManyCheckbox>
-				</p:panelGrid>
-				<p:commandButton value="Filtrar"/>
-			</p:panel>
->>>>>>> Develop
+>>>>>>> master
 			<p:dataTable id="produtosTable"
 				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produtos"
 				style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado."
@@ -98,8 +83,7 @@
 					<h:outputText value="R$ 1.200,00" />
 				</p:column>
 
-				<p:column headerText="Status"
-					style="width: 100px">
+				<p:column headerText="Status" style="width: 100px">
 					<h:outputText value="Emitido" />
 				</p:column>
 
